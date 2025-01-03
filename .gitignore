@@ -1,0 +1,18 @@
+# Node.js dependencies
+node_modules/
+
+# npm logs
+npm-debug.log
+
+# Windows image file system
+Thumbs.db
+
+# macOS Finder system files
+.DS_Store
+
+# build output directories
+/dist
+
+# Electron specific files
+*.exe
+*.app
