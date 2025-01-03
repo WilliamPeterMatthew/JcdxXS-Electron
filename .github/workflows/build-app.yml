@@ -14,7 +14,7 @@ jobs:
 
     strategy:
       matrix:
-        architecture: [x64, ia32]
+        architecture: [x64, x86]
 
     steps:
       - name: Checkout code
@@ -30,12 +30,18 @@ jobs:
         run: |
           npm install
 
-      - name: Build Electron App
+      - name: Build Electron App for x64
+        if: ${{ matrix.architecture == 'x64' }}
         run: |
-          npm run build --win --${{ matrix.architecture }}
+          npm run build --win --x64
+
+      - name: Build Electron App for ia32
+        if: ${{ matrix.architecture == 'x86' }}
+        run: |
+          npm run build --win --ia32
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v2
         with:
           name: my-browser-app-windows-${{ matrix.architecture }}
           path: dist/*
