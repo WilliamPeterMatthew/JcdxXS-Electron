@@ -29,6 +29,7 @@
         }
       ],
       "icon": "favicon.ico"
-    }
+    },
+    "publish": null
   }
 }
