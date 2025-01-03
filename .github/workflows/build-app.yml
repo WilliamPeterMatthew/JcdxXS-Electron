@@ -3,7 +3,7 @@ name: Build App
 on:
   push:
     branches:
-      - main
+      - master
   pull_request:
     branches:
       - master
@@ -24,6 +24,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '18'
+          architecture: ${{ matrix.architecture }}
 
       - name: Install dependencies
         run: |
