@@ -1,0 +1,34 @@
+{
+  "name": "JcdxXS",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "keywords": [],
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.0.0",
+    "electron-builder": "^22.0.0"
+  },
+  "build": {
+    "appId": "cn.edu.cppu.oj",
+    "productName": "JcdxXS",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "ia32"]
+        }
+      ],
+      "icon": "favicon.ico"
+    }
+  }
+}
