@@ -35,7 +35,7 @@ jobs:
           npm run build --win --${{ matrix.architecture }}
 
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: my-browser-app-windows-${{ matrix.architecture }}
           path: dist/*
