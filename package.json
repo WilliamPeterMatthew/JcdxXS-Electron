@@ -19,10 +19,16 @@
     "productName": "JcdxXS",
     "win": {
       "target": [
-        "nsis",
-        "zip"
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        },
+        {
+          "target": "zip",
+          "arch": ["x64", "ia32"]
+        }
       ],
-      "icon": "favicon.ico"
+      "icon": "favicon.png"
     },
     "publish": null
   }
