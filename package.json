@@ -22,7 +22,7 @@
         "nsis",
         "zip"
       ],
-      "icon": "favicon.png"
+      "icon": "favicon.ico"
     },
     "publish": null
   }
